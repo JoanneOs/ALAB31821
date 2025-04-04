@@ -2,10 +2,17 @@
 <html>
 <head>
   <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
   <h1>About This Project</h1>
   <a href="/">Back to Home</a>
+
+   <!-- Show the image -->
+   <div>
+    <img src="/images/sample.jpg" alt="Sample Image" style="max-width: 300px; margin-top: 20px;">
+  </div>
 
   <form action="/download-image" method="GET">
     <button type="submit">Download Sample Image</button>
