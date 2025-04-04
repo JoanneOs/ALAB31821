@@ -33,3 +33,23 @@ app.use((req, res, next) => {
     console.log(`Request received at: ${new Date()}`);
     next();
   });
+
+  // Routes
+app.get('/', (req, res) => {
+    res.render('home', { title: 'Home Page' });
+  });
+  
+  app.get('/about', (req, res) => {
+    res.render('about', { title: 'About Page' });
+  });
+  
+  app.post('/submit-form', (req, res) => {
+    console.log('Form submitted:', req.body.username);
+    res.send(`Hello, ${req.body.username}!`);
+  });
+  
+  app.get('/download-image', (req, res) => {
+    const imagePath = path.join(__dirname, 'public/images/sample.jpg');
+    res.download(imagePath);
+  });
+  
