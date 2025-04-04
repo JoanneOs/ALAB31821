@@ -11,3 +11,14 @@
 
 //mkdir -p public/images public/css views
 //touch views/home.ejs views/about.ejs index.js
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+
+const app = express();
+
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
