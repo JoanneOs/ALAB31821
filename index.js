@@ -53,3 +53,8 @@ app.get('/', (req, res) => {
     res.download(imagePath);
   });
   
+  // Start server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
