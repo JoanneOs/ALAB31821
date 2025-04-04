@@ -27,3 +27,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+
+// Custom middleware example
+app.use((req, res, next) => {
+    console.log(`Request received at: ${new Date()}`);
+    next();
+  });
