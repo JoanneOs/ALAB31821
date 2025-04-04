@@ -8,3 +8,6 @@
 // git branch -M main
 // git push -u origin main
 // now my code will go to the right repo.
+
+//mkdir -p public/images public/css views
+//touch views/home.ejs views/about.ejs index.js
